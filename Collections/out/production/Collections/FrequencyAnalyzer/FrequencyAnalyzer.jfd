@@ -1,0 +1,75 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 100, 100 )
+			add( new FormComponent( "javax.swing.JTextArea" ) {
+				name: "textArea"
+				"tabSize": 9
+				"minimumSize": new java.awt.Dimension( 100, 100 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 7
+				"y": 7
+				"width": 697
+				"height": 478
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu1"
+					"text": "File"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "open"
+						"text": "Open"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "openActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "exit"
+						"text": "Exit"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "exitActionPerformed", true ) )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "analyze"
+					"text": "Analyze"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "analyzeActionPerformed", true ) )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 67, 67 )
+			"size": new java.awt.Dimension( 576, 451 )
+		} )
+		add( new FormComponent( "javax.swing.JFileChooser" ) {
+			name: "fileChooser"
+			"dialogTitle": "Choosing a file"
+			"acceptAllFileFilterUsed": false
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 529 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "analyzeResult"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "okBtn"
+				"text": "OK"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "okBtnActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 90
+				"y": 260
+			} )
+			add( new FormComponent( "javax.swing.JTextArea" ) {
+				name: "resultArea"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 5
+				"width": 225
+				"height": 255
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 466, 557 )
+			"size": new java.awt.Dimension( 193, 278 )
+		} )
+	}
+}
